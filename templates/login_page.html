@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <style type="text/css">
+
+        .login-style{
+            width:23%; 
+            height: 35%; 
+            margin-top:10%;
+            margin-left:37%;
+            float:left;
+        }
+
+        .logo-style{
+            width:70%; 
+            height: 100px; 
+            margin-left:15%;
+        }
+
+        .box-style{
+            border-radius:30px; 
+            border: 1px solid rgb(185, 184, 184);
+        }
+
+        .id-style{
+            border: 1px solid rgb(196, 194, 194); 
+            border-radius:10px 10px 0px 0px;height:50%;
+            width:120%; 
+            height:50px;
+            margin-top:10px;
+            margin-left:12%;
+        }
+
+        .password-style{
+            border: 1px solid rgb(196, 194, 194); 
+            border-radius:0px 0px 10px 10px;height:50%;
+            width:120%;
+            height:50px; 
+            margin-left:12%;
+        }
+
+        .login-button-style{
+            width:100%;
+            height:100%; 
+            border: 1px solid rgb(250, 250, 250);
+            background-color: rgb(48, 53, 48);
+            border-radius:10px;
+        }
+
+        .button-area{
+            height:50%;
+            width:120%; 
+            margin-top:10%;
+            margin-left:12%;
+            margin-top:20%;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    {% if answer ==False %}
+            <script type = "text/javascript">
+                alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+            </script>
+    {%endif%}
+
+    <div class = "login-style">
+        <div class = "logo-style">
+            <a href = "{{url_for('home')}}">
+                <img src = "../static\img/logo2.PNG" style = "width:100%; height:90%;">
+            </a>
+        </div>
+        
+        <form action="{{url_for('log_in')}}" method="get">
+            <div class = "box-style">
+            
+                <div style =  "width:67%; margin-top:5%;">
+                    <input type="text" class = "id-style" placeholder="아이디" name="login_id">
+                    <input type="password" class = "password-style" placeholder="비밀번호" name="login_pw">
+                </div>
+        
+                <div style =  "width:68%; height:100px;">
+                    <div class = "button-area">
+                        <button type="submit" class="btn btn-primary login-button-style" id = "login_button">
+                         <p style = "font-size:1.6em; margin-top:3%;color:white;">
+                            로그인
+                            </p>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+        </form>
+
+        <div>
+            <p>
+                <a href="{{url_for('sign_up')}}" style = "margin-left:41%; color:gray;" >회원가입</a>
+            </p>
+        </div>
+    </div>
+</body>

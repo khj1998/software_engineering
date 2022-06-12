@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입하기</title>
+
+    <style>
+        #new_user{
+            width:200px;
+        }
+
+        body{
+    background-color: azure;
+}
+
+#top-bar{
+    width:100%;
+    height: 70px;
+    background-color:white;
+    display : inline-block;
+    }
+
+    #Logo.fixed{
+        margin-left:50px;
+        position:static;
+        text-decoration: none;
+        display : inline-block;
+    }
+
+    #bar-wrap{
+        display: flex;
+        align-items:center;
+        width:100%;
+        max-width:1024px;
+        margin: 0 auto;
+        padding: 16px 0;
+    }
+
+    </style>
+
+</head>
+<body>
+    {%if create==-1%}
+    <script type="text/javascript">
+        alert('해당 아이디는 생성할 수 없습니다.')
+    </script>
+    {%endif%}
+    <form method="get" action="{{url_for('sign_in')}}">
+       아이디   <input type="text" style="margin-left:16px;" id="new_user" placeholder="사용할 아이디를 입력하세요." name="new_id"><br>
+       비밀번호 <input type="text" id="new_user" placeholder="사용할 비밀번호를 입력하세요." name="new_pw"><br>
+        <button type="submit">회원가입하기</button>
+    </form>
+</body>
+</html>

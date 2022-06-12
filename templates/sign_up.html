@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <style type="text/css">
+
+        .id-style{
+            border: 1px solid rgb(196, 194, 194); 
+            width:25%; 
+            height:50px;
+            margin-left:37%;
+            margin-top:-5%;
+        }
+
+        .sign-button-style{
+            width:25%;
+            height:100%; 
+            margin-left:37%;
+            border: 1px solid rgb(250, 250, 250);
+            background-color: rgb(48, 53, 48);
+            border-radius:10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    {%if create==-1%}
+    <script type="text/javascript">
+        alert('해당 아이디는 생성할 수 없습니다.')
+    </script>
+    {%endif%}
+
+<form method="get" action="{{url_for('sign_in')}}"> 
+    <div style = "width:100%; margin-top:9%;">
+        <a href = "{{url_for('home')}}">
+            <img src = "../static\img/logo2.PNG" style = "width:10%;height:70px; margin-left:45%;">
+        </a>
+    </div>
+
+
+    <div style = "width:100%; margin-top:2%;">
+        <p style = "margin-left:37%">사용할 아이디</p>
+        <input type="text" class = "id-style" name="new_id">
+    </div>
+
+    <div style = "width:100%; margin-top:2%;">
+        <p style = "margin-left:37%">사용할 비밀번호</p>
+        <input type="password"  class = "id-style" name="new_pw">
+    </div>
+
+    <div style = "width:100%; margin-top:2%;">
+        <button type="submit" class="btn btn-primary sign-button-style">
+            <p style = "font-size:1.6em; margin-top:3%;color:white;">
+                가입하기
+            </p>
+        </button>
+    </div>
+</form>
+</body>

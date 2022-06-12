@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function LOG_OUT(){
+            alert("로그아웃 되었습니다.");
+        }
+    </script>
+
+    <style>
+
+        #top-bar{
+        width:100%;
+        height: 70px;
+        background-color:white;
+        display : inline-block;
+        }
+
+        #Logo.fixed{
+            margin-left:50px;
+            position:static;
+            text-decoration: none;
+            display : inline-block;
+        }
+
+        #bar-wrap{
+            display: flex;
+            align-items:center;
+            width:100%;
+            max-width:1024px;
+            margin: 0 auto;
+            padding: 16px 0;
+        }
+
+        #searching-bar{
+            position:static;
+            width:400px;
+            height:30px;
+            margin-left:60px;
+            border-radius: 10px;
+        }
+
+        .select-bar{
+            display:flex;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .login{
+            width:200px;
+            height:200px;
+            background-color:antiquewhite;
+            text-align: center;
+        }
+
+        #login_button{
+            margin-top:15px;
+            height:40px;
+            width:100px;
+        }
+
+        .col-style{
+              background-color: rgb(245, 240, 240); 
+              height:350px;
+              margin-left: 5%;
+            }
+
+            .image-style{
+              width:100%; 
+              height:80%;
+            }
+
+            .button-style{
+              margin-top:-10px;
+              width:80%;
+              margin-left:10%;
+            }
+
+            .logout-button-style{
+            width:100%;
+            height:100%; 
+            border: 1px solid rgb(250, 250, 250);
+            background-color: rgb(48, 53, 48);
+            border-radius:10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div style = "width:100%; height:100px; float:left;">
+        <a href = "{{url_for('home')}}">
+          <img src = "../static\img/logo2.PNG" style = "width:15%;height:100%; margin-left:43%">
+        </a>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border:solid 3px black;;">
+        <input type="text" class="form-control" placeholder="물품 검색" aria-label="Username" style="width:17%;">
+        <button style = "margin-left:0.5%;"  class="btn btn-dark">검색</button>
+         
+
+          <div class="collapse navbar-collapse" id="navbarNav" style="margin-left:25%; float:left;">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" onclick="location.href='/';">Home3 <span class="sr-only">(current)</span></a>
+              </li>
+          
+            </ul>
+        </nav>
+
+        <div style = "width:100%; height:10%;margin-top:2%;">
+          <p style = "text-align: center; font-size: 2em;">On Sales!!</p>
+        </div>
+
+        <br><br><br>
+
+        <div class="container" style = "margin-left:5%;">
+          <div class="row" style = "width:150%;">
+            <div class="col-sm col-style">
+              <img src = "../static\img/product1.PNG" class = "image-style">
+              <p style = "text-align: center;">GEFORCE 그래픽카드</p>
+              <button type="button" class="btn btn-dark button-style">정보 보기</button>
+            </div>
+            
+            <div class="col-sm col-style">
+              <img src = "../static\img/product2.PNG" class = "image-style">
+              <p style = "text-align: center;">i9-CPU</p>
+              <button type="button" class="btn btn-dark button-style">정보 보기</button>
+            </div>
+
+            <div class="col-sm col-style">
+              <img src = "../static\img/product3.PNG" class = "image-style">
+              <p style = "text-align: center;">로지텍 마우스</p>
+              <button type="button" class="btn btn-dark button-style">정보 보기</button>
+            </div>
+
+            <div class="col-sm col-style">
+              <img src = "../static\img/product4.PNG" class = "image-style">
+              <p style = "text-align: center;">LG 그램</p>
+              <button type="button" class="btn btn-dark button-style">정보 보기</button>
+            </div>
+            
+          </div>
+        </div>
+
+    
+</body>
+</html>
